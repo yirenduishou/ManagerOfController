@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D3569EA943327A4EED0C2B1 /* libPods-ctrlsOfManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 171B05C2320B4C4C66CAA0F1 /* libPods-ctrlsOfManager.a */; };
+		417602891D0EA90500DA5D84 /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417602881D0EA90500DA5D84 /* firstViewController.m */; };
+		4176028C1D0EA92400DA5D84 /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4176028B1D0EA92400DA5D84 /* secondViewController.m */; };
 		41C07A5A1D0E96DB00D1F265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C07A591D0E96DB00D1F265 /* main.m */; };
 		41C07A5D1D0E96DB00D1F265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C07A5C1D0E96DB00D1F265 /* AppDelegate.m */; };
 		41C07A601D0E96DB00D1F265 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C07A5F1D0E96DB00D1F265 /* ViewController.m */; };
@@ -42,6 +44,10 @@
 		0AA80787F4D068BB4A73C726 /* Pods-ctrlsOfManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ctrlsOfManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ctrlsOfManager/Pods-ctrlsOfManager.debug.xcconfig"; sourceTree = "<group>"; };
 		171B05C2320B4C4C66CAA0F1 /* libPods-ctrlsOfManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ctrlsOfManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B59FD30DF1F6CB21F475770 /* Pods-ctrlsOfManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ctrlsOfManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ctrlsOfManagerTests/Pods-ctrlsOfManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		417602871D0EA90500DA5D84 /* firstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
+		417602881D0EA90500DA5D84 /* firstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
+		4176028A1D0EA92400DA5D84 /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		4176028B1D0EA92400DA5D84 /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
 		41C07A551D0E96DB00D1F265 /* ctrlsOfManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ctrlsOfManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C07A591D0E96DB00D1F265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41C07A5B1D0E96DB00D1F265 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +143,10 @@
 				41C07A661D0E96DB00D1F265 /* LaunchScreen.storyboard */,
 				41C07A691D0E96DB00D1F265 /* Info.plist */,
 				41C07A581D0E96DB00D1F265 /* Supporting Files */,
+				417602871D0EA90500DA5D84 /* firstViewController.h */,
+				417602881D0EA90500DA5D84 /* firstViewController.m */,
+				4176028A1D0EA92400DA5D84 /* secondViewController.h */,
+				4176028B1D0EA92400DA5D84 /* secondViewController.m */,
 			);
 			path = ctrlsOfManager;
 			sourceTree = "<group>";
@@ -447,6 +457,8 @@
 				41C07A601D0E96DB00D1F265 /* ViewController.m in Sources */,
 				41C07A5D1D0E96DB00D1F265 /* AppDelegate.m in Sources */,
 				41C07A5A1D0E96DB00D1F265 /* main.m in Sources */,
+				417602891D0EA90500DA5D84 /* firstViewController.m in Sources */,
+				4176028C1D0EA92400DA5D84 /* secondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -575,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ctrlsOfManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = temple.ctrlsOfManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ctrlsOfManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = temple.ctrlsOfManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
