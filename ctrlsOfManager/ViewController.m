@@ -28,27 +28,27 @@
     self.view.backgroundColor = [UIColor redColor];
 
 //创建子控制器管理控件
+    [self createChildVC];
 [self createChildVcCtr];
 //    创建子控制器
-//    [self createChildVC];
 }
 //
-//- (void)createChildVC
-//{
-//
-//    _firstVc = [[firstViewController alloc] init];
-//    _firstVc.view.frame = CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height - 40);
-//    [self addChildViewController:_firstVc];
-//    [self.view addSubview:_firstVc.view];
-//
-//
-//    
-//    _secondVc = [[secondViewController alloc] init];
-//    _secondVc.view.frame = CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height - 40);
-//    [self addChildViewController:_secondVc];
-//    [self.view addSubview:_secondVc.view];
-//    
-//}
+- (void)createChildVC
+{
+
+    _firstVc = [[firstViewController alloc] init];
+    _firstVc.view.frame = CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height - 40);
+    [self addChildViewController:_firstVc];
+    [self.view addSubview:_firstVc.view];
+
+
+    
+    _secondVc = [[secondViewController alloc] init];
+    _secondVc.view.frame = CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height - 40);
+    [self addChildViewController:_secondVc];
+    [self.view addSubview:_secondVc.view];
+    
+}
 
 - (void)createChildVcCtr
 {
@@ -60,6 +60,7 @@
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width * i * 0.5, 0, self.view.frame.size.width * 0.5, 40)];
         btn.tag = i;
         [btn setTitle:(i == 0)?@"diyige":@"dierge" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
         [_selectView addSubview:btn];
         
     }
@@ -77,26 +78,25 @@
     if (sender.tag == 0) {
         [UIView animateWithDuration:0.2 animations:^{
 //            点击左边的按钮红线的位置
-            _redLine.frame = CGRectMake(0, 37, self.view.frame.size.width, 3);
+            _redLine.frame = CGRectMake(0, 37, self.view.frame.size.width * 0.5, 3);
             
         } completion:^(BOOL finished) {
 //            显示第一个控制器，隐藏第二个控制器
-            [_firstVc removeFromParentViewController];
-            [self addChildViewController:_secondVc];
-            
-            
+            _firstVc.view.hidden = NO;
+            _secondVc.view.hidden = YES;
         }];
         
         
-    }else{
+    }else if (sender.tag == 1){
         [UIView animateWithDuration:0.2 animations:^{
             //            点击左边的按钮红线的位置
-            _redLine.frame = CGRectMake(self.view.frame.size.width * 0.5, 37, self.view.frame.size.width, 3);
+            _redLine.frame = CGRectMake(self.view.frame.size.width * 0.5, 37, self.view.frame.size.width * 0.5, 3);
             
         } completion:^(BOOL finished) {
             //            显示第一个控制器，隐藏第二个控制器
-            [_secondVc removeFromParentViewController];
-            [self addChildViewController:_firstVc];
+            _firstVc.view.hidden = YES;
+            _secondVc.view.hidden = NO;
+
             
         }];
     
